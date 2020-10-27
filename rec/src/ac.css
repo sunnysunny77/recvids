@@ -1,0 +1,40 @@
+nav {
+    width: 100%;
+    height: 115px;
+    background-image: url('wall.jpg');
+}
+
+h3 {
+    color: white;
+    text-align: right;
+    font-size: 130%;
+    font-weight: 700;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    margin: 0;
+    padding-top: 2%;
+    padding-right: 2%;
+}
+
+#ex {
+    color: black;
+    cursor: pointer;
+}
+
+#ex:hover {
+    color: rgb(231, 200, 0);
+}
+
+.iii {
+    color: rgb(231, 200, 0);
+    cursor: pointer;
+}
+
+.iii:hover {
+    color: white
+}
+
+@media screen and (max-device-width: 980x) {
+    #di {
+        max-width: 980px;
+    }
+}

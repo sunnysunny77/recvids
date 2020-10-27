@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+}
+
+.cont {
+  background-color: orangered;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#di {
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 26.5;
+  font-weight: 700;
+  padding: 0;
+  margin: auto;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  margin-top: 17.5%;
+}
+
+h2 {
+  color: white;
+  text-align: left;
+  font-size: 26.5;
+  font-weight: 700;
+  margin: 0;
+}
+
+#l1 {
+  background-image: url('wall.jpg');
+  background-position: center;
+  background-size: cover;
+  border: solid 2px black;
+}
+
+#lo {
+  margin: auto;
+  width: 350px;
+  background-color: rgb(111, 26, 189);
+  color: white;
+  clear: both;
+  border: solid 2px black;
+}
+
+@media screen and (max-device-width: 980px) {
+  #di {
+      max-width: 980px;
+  }
+}

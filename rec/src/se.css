@@ -1,0 +1,60 @@
+nav {
+    width: 100%;
+    height: 115px;
+    background-image: url('wall.jpg');
+}
+
+h3 {
+    color: white;
+    text-align: right;
+    font-size: 130%;
+    font-weight: 700;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    margin: 0;
+    padding-top: 2%;
+    padding-right: 2%;
+}
+
+.mss {
+    padding: initial;
+    text-align: center;
+}
+
+#f0, #f1 {
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    background-color: rgb(111, 26, 189);
+    border: solid 2px black;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    width: 100%;
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+}
+
+#del {
+    height: 51px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(111, 26, 189);
+    border: initial;
+    font-size: inherit;
+    text-align: center;
+}
+
+#del::-webkit-input-placeholder, #del::placeholder {
+    color: white;
+}
+
+@media screen and (max-device-width: 980px) {
+    #di {
+        max-width: 980px;
+    }
+}
