@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use(function (req, res, next) {
-    let allowedOrigins = ['https://www.rec.videos.sunnytemp.live', 'https://rec.videos.sunnytemp.live']
+    let allowedOrigins = ['https://www', 'https://']
     let origin = req.headers.origin
     if (allowedOrigins.indexOf(origin) > -1) {
         res.setHeader('Access-Control-Allow-Origin', origin)
