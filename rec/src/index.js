@@ -34,7 +34,7 @@ class Index extends React.Component {
         }
     }
     componentDidMount() {
-        axios.post(`https://rec.videos.sunnytemp.live/tok`)
+        axios.post(`https:///tok`)
             .then(res => {
                 let use = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                 if (use.user) {
@@ -62,7 +62,7 @@ class Index extends React.Component {
             if (this.state.password && this.state.username) {
 
                 let token = jwt.sign({ username: this.state.username, password: this.state.password }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-                axios.post(`https://rec.videos.sunnytemp.live/logUp`, { token: token })
+                axios.post(`https:///logUp`, { token: token })
                     .then(res => {
                         let use = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                         if (use.user) {
@@ -84,7 +84,7 @@ class Index extends React.Component {
     sub0 = (event) => {
         event.preventDefault()
         let token = jwt.sign({ username: this.state.username, password: this.state.password }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-        axios.post(`https://rec.videos.sunnytemp.live/logIn`, { token: token })
+        axios.post(`https:///logIn`, { token: token })
             .then(res => {
                 let use = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                 if (use.user) {

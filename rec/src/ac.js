@@ -45,7 +45,7 @@ class Ac extends React.Component {
                     return actions.order.capture().then((details) => {
                         document.getElementById('name').innerHTML = 'Thak you: \xa0' + details.payer.name.given_name
                         let token = jwt.sign({ username: this.state.a }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-                        return axios.post(`https://rec.videos.sunnytemp.live/pay`, { token: token })
+                        return axios.post(`https:///pay`, { token: token })
                             .then(res => {
                                 let use = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                                 this.setState({ pay: true })
@@ -60,7 +60,7 @@ class Ac extends React.Component {
         script.src = 'https://www.paypal.com/sdk/js?client-id=AVOpOjhvvp16zgBvD3gyNYfHDQpBql2zM1Cv3p4GFMsfiGE3yWPPPVJISVYktJaqlBB9ZHTVDq-s9ftJ&currency=AUD'
 
         let token = jwt.sign({ username: this.state.a }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-        axios.post(`https://rec.videos.sunnytemp.live/gg`, { token: token })
+        axios.post(`https:///gg`, { token: token })
             .then(res => {
                 let rsss = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                 return this.tab(rsss.message[0].ofString)
@@ -68,7 +68,7 @@ class Ac extends React.Component {
                 alert(error.response.statusText)
             })
         let token1 = jwt.sign({ username: this.state.a }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-        axios.post(`https://rec.videos.sunnytemp.live/pa`, { token: token1 })
+        axios.post(`https:///pa`, { token: token1 })
             .then(res => {
                 let use = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                 return this.t(use.message.payed, use.message.date)
@@ -110,7 +110,7 @@ class Ac extends React.Component {
     }
     bout = (v) => {
         let token = jwt.sign({ username: this.state.a }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-        axios.post(`https://rec.videos.sunnytemp.live/do`, { token: token })
+        axios.post(`https:///do`, { token: token })
             .then(res => {
                 let use = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                 if (use.message) {
@@ -123,7 +123,7 @@ class Ac extends React.Component {
             })
     }
     out = () => {
-        axios.post(`https://rec.videos.sunnytemp.live/clear`)
+        axios.post(`https:///clear`)
             .then(res => {
                 ReactDOM.render(<Index />, document.getElementById('root'))
             }).catch(error => {

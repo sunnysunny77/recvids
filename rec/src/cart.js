@@ -26,7 +26,7 @@ class Cart extends React.Component {
         }
     }
     componentDidMount() {
-        axios.post(`https://rec.videos.sunnytemp.live/g`)
+        axios.post(`https:///g`)
             .then(res => {
                 let rsss = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                 return this.tab(rsss.message)
@@ -34,7 +34,7 @@ class Cart extends React.Component {
                 alert(error.response.statusText)
             })        
         let token1 = jwt.sign({ username: this.state.a }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-        axios.post(`https://rec.videos.sunnytemp.live/pa`, { token: token1 })
+        axios.post(`https:///pa`, { token: token1 })
             .then(res => {
                 let use = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)         
                 return use.message.payed 
@@ -68,7 +68,7 @@ class Cart extends React.Component {
                 this.setState({ c: "Anything but .mp4.mp4", dis: { display: "block" } })
             } else {
                 let token = jwt.sign({ namev: this.state.vdel }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-                axios.post(`https://rec.videos.sunnytemp.live/ggg`, { token: token })
+                axios.post(`https:///ggg`, { token: token })
                     .then(res => {
                         let rsss = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                         if (rsss.message) {

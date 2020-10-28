@@ -40,7 +40,7 @@ class Se extends React.Component {
             let extt = ext.trim()
             if (extt === 'mp4') {
                 let token = jwt.sign({ vidname: this.state.del.trim(), username: this.state.a }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
-                axios.post(`https://rec.videos.sunnytemp.live/down`, { token: token })
+                axios.post(`https:///down`, { token: token })
                     .then(res => {
                         let rsss = jwt.verify(res.data.tokenres, process.env.REACT_APP_JWT_SECRET)
                         this.setState({ c: rsss.message, dis1: { display: "block" } })
@@ -77,7 +77,7 @@ class Se extends React.Component {
                             formData.append("filetoupload", this.state.file)
                             let token = jwt.sign({ username: this.state.a }, process.env.REACT_APP_JWT_SECRET, { expiresIn: 60 * 2 })
                             formData.append('go', JSON.stringify({ token: token }))
-                            axios.post(`https://rec.videos.sunnytemp.live/up`, formData, {
+                            axios.post(`https:///up`, formData, {
                                 headers: {
                                     'Content-Type': 'multipart/form-data'
                                 }
