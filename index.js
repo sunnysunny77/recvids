@@ -1,6 +1,3 @@
-let a = {b: 0}
-let c= "b"
-console.log(a[c])
 
 let bcrypt = require('bcryptjs')
 let jwt = require('jsonwebtoken')
@@ -184,7 +181,8 @@ app.post('/up', function (req, res) {
                     } else {
                         let oldpath = files.filetoupload.path
                         let newpath = './store/build/vid/' + user.username + '/' + files.filetoupload.name
-                        let s = String(newpath)
+                        let newpaths = './vid/' + user.username + '/' + files.filetoupload.name
+                        let s = String(newpaths)
                         let extension = newpath.split('/').pop()
                         let gg = extension.replace(/.mp4/, '')
                         mod.updateOne({ username: user.username }, {
@@ -197,7 +195,7 @@ app.post('/up', function (req, res) {
                                     'of': gg
                                 }
                             }).exec(function (err) {
-                                fs.rename(oldpath, newpath)
+                                fs.renameSync(oldpath, newpath)
                                 let token = jwt.sign({ message: 'Upload complete' }, jsonn.key, { expiresIn: 60 * 2 })
                                 return res.json({ tokenres: token })
                             })
@@ -208,7 +206,8 @@ app.post('/up', function (req, res) {
                 fs.mkdirSync('./store/build/vid/' + user.username + '/')
                 let oldpath = files.filetoupload.path
                 let newpath = './store/build/vid/' + user.username + '/' + files.filetoupload.name
-                let t = String(newpath)
+                let newpaths = './vid/' + user.username + '/' + files.filetoupload.name
+                let t = String(newpaths)
                 let extension = newpath.split('/').pop()
                 let gg = extension.replace(/.mp4/, '')
                 mod.updateOne({ username: user.username }, {
@@ -221,7 +220,7 @@ app.post('/up', function (req, res) {
                             'of': gg
                         }
                     }).exec(function (err) {
-                        fs.rename(oldpath, newpath)
+                        fs.renameSync(oldpath, newpath)
                         let token = jwt.sign({ message: 'Upload complete' }, jsonn.key, { expiresIn: 60 * 2 })
                         return res.json({ tokenres: token })
                     })
