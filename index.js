@@ -240,8 +240,8 @@ app.post('/down', function (req, res) {
         if (fs.existsSync('./store/build/vid/' + us.username + '/')) {
             fs.readdir('./store/build/vid/' + us.username + '/', (err, names) => {
                 let n = names.includes(us.vidname)
-                if (n) {
-                    let s = String('./store/build/vid/' + us.username + '/' + us.vidname)
+                if (n) {                 
+                    let s = String('./vid/' + us.username + '/' + us.vidname)
                     let extension = s.split('/').pop()
                     let gg = extension.replace(/.mp4/, '')
                     mod.updateOne({ username: us.username }, {
