@@ -223,7 +223,7 @@ class Cart extends React.Component {
                     {mm}
                     <CloseIcon
                       className="bbb"
-                      style={{ float: "right", width: "80px", height: "80px" }}
+                      style={{ display:"block",margin: "auto", width: "80px", height: "80px" }}
                       onClick={() =>
                         (document.querySelector(
                           "#id" + username
@@ -270,7 +270,7 @@ class Cart extends React.Component {
               controlsList="nodownload"
             
             >
-              <source src type="video/mp4" />
+              <source src="./vid.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
