@@ -23,7 +23,7 @@ class Menu extends React.Component {
       document.querySelector(".m").style.position = "fixed";
       document.querySelector(".m").style.top = "0";
       document.querySelector("#di").style.position = "relative";
-      document.querySelector("#di").style.paddingTop = "50px";
+      document.querySelector("#di").style.paddingTop = "75px";
     } else {
       document.querySelector(".m").style.position = "relative";
       document.querySelector("#di").style.paddingTop = "0";
@@ -41,7 +41,7 @@ class Menu extends React.Component {
               )
             }
           >
-            &bull;Upload & Delete
+            Upload & Delete
           </span>
           <span
             onClick={() =>
@@ -51,7 +51,7 @@ class Menu extends React.Component {
               )
             }
           >
-            &bull;Account
+            Account
           </span>
           <span
             onClick={() =>
@@ -61,7 +61,7 @@ class Menu extends React.Component {
               )
             }
           >
-            &bull;Search & Play
+            Search & Play
           </span>
         </div>
       </div>

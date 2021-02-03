@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 5%;
-  margin: 10% auto;
+  margin: 5% auto;
 }
 #vvv {
   margin: auto;
@@ -48,7 +48,6 @@
   background-color: rgb(111, 26, 189);
   font-size: inherit;
   text-align: center;
-  width: 212px;
   border: none;
 }
 

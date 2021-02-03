@@ -1,5 +1,5 @@
 .m {
-  height: 50px;
+  height: 75px;
   background-color: black;
   z-index: 999;
   width: 100%;
@@ -8,7 +8,7 @@
 .m span {
   font-size: 17.5px;
   color: white;
-  line-height: 50px;
+  line-height: 75px;
   cursor: pointer;
   padding: 0 10px;
 }

@@ -240,10 +240,12 @@ class Cart extends React.Component {
     let res = a.replace("./store/build/", "./");
     document.getElementById("vv").style.backgroundImage = "none";
     document.getElementById("vvv").src = res;
+    document.getElementById("vv").style.padding = 0;
     this.setState({ vd: null });
-    document.getElementById("vvv").scrollIntoView();
+    window.scrollTo(0, 115);
     document.getElementById("vvv").onended = () => {
     document.getElementById("vv").style.backgroundImage = "url('wlle.jpg')";
+    document.getElementById("vv").style.padding = "5%";
   
     };
   };
