@@ -113,7 +113,7 @@ app.post('/tok', function (req, res) {
         jwt.verify(req.cookies.token.tokenres, jsonn.key, function (err, user) {
             mod.findOne({ username: user.user }).exec(function (err, users) {
                 if (!users) {
-                    let token = jwt.sign({ message: '↜\xa0\xa0Log In  \xa0/\xa0  Sign Up' }, jsonn.key, { expiresIn: 60 * 2 })
+                    let token = jwt.sign({ message: 'Log In/Sign Up' }, jsonn.key, { expiresIn: 60 * 2 })
                     return res.json({ tokenres: token })
                 } else {
                     if (users.password === user.pass) {
@@ -127,7 +127,7 @@ app.post('/tok', function (req, res) {
             })
         })
     } else {
-        let token = jwt.sign({ message: '↜\xa0\xa0Log In  \xa0/\xa0 Sign Up' }, jsonn.key, { expiresIn: 60 * 2 })
+        let token = jwt.sign({ message: 'Log In/Sign Up' }, jsonn.key, { expiresIn: 60 * 2 })
         return res.json({ tokenres: token })
     }
 })
