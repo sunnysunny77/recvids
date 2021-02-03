@@ -214,7 +214,7 @@ class Cart extends React.Component {
                       display: "none",
                       fontSize: "110%",
                       margin: 0,
-                      textAlign: "right",
+                      textAlign: "center",
                       color: "white",
                       backgroundColor: "rgb(111, 26, 189)",
                       border: "solid 2px black",
