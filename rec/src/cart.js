@@ -68,6 +68,9 @@ class Cart extends React.Component {
     if (this.state.vd) {
       this.play(this.state.vd);
     }
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
   }
   change = (event) => {
     let nam = event.target.name;
@@ -244,9 +247,8 @@ class Cart extends React.Component {
     this.setState({ vd: null });
     window.scrollTo(0, 115);
     document.getElementById("vvv").onended = () => {
-    document.getElementById("vv").style.backgroundImage = "url('wlle.jpg')";
-    document.getElementById("vv").style.padding = "5%";
-  
+      document.getElementById("vv").style.backgroundImage = "url('wlle.jpg')";
+      document.getElementById("vv").style.padding = "5%";
     };
   };
   render() {
@@ -260,8 +262,15 @@ class Cart extends React.Component {
         <Menu uses0={this.state.a} />
         <div id="di">
           <div id="vv">
-            <video id="vvv" poster="tv.jpg" controls>
-              <source src="" type="video/mp4" />
+            <video
+              id="vvv"
+              poster="tv.jpg"
+              controls="controls" 
+              preload="auto"
+              controlsList="nodownload"
+            
+            >
+              <source src type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
