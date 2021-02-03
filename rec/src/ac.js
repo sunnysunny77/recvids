@@ -26,6 +26,9 @@ class Ac extends React.Component {
     script.onload = () => {
       window.paypal
         .Buttons({
+          style: {
+            shape: "pill",
+          },
           createOrder: (data, actions) => {
             return actions.order.create({
               purchase_units: [
@@ -261,7 +264,7 @@ class Ac extends React.Component {
           <br />
           <div
             id="paypal-button-container"
-            style={{ textAlign: "center" }}
+            style={{ textAlign: "center", maxWidth: "90%", margin: "auto" }}
           ></div>
           <br />
           <br />
