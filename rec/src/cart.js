@@ -207,7 +207,7 @@ class Cart extends React.Component {
                     style={{
                       paddingTop: "5px",
                       minHeight: "80px",
-                      width: "100%",
+                      width: "calc(100% - 4px)",
                       display: "none",
                       fontSize: "110%",
                       margin: 0,
