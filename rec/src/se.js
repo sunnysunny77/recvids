@@ -159,9 +159,11 @@ class Se extends React.Component {
     return (
       <div className="cont">
         <nav>
-          <h3>{this.state.a}</h3>
+          <h2 className="h2">{this.state.a}</h2>
           <br />
-          <h3 style={{ padding: "0px 20px" }}>Rec Videos</h3>
+          <h1 className="h1" style={{ padding: "0px 20px" }}>
+            Rec Videos
+          </h1>
         </nav>
         <Menu uses0={this.state.a} />
         <div id="di">
@@ -185,6 +187,7 @@ class Se extends React.Component {
               <Button
                 id="wy"
                 style={{
+                  width: "100%",
                   color: "white",
                   backgroundColor: "black",
                   width: "100%",
@@ -202,9 +205,9 @@ class Se extends React.Component {
           </Tooltip>
           <br />
           <div style={{ height: "25px" }}>
-            <h3 className="mss" style={this.state.dis}>
+            <h2 id="cent0" className="h2" style={this.state.dis}>
               {this.state.b}
-            </h3>
+            </h2>
           </div>
           <br />
           <br />
@@ -224,6 +227,7 @@ class Se extends React.Component {
               <Button
                 id="wy1"
                 style={{
+                  width: "100%",
                   color: "white",
                   backgroundColor: "black",
                   width: "100%",
@@ -241,9 +245,9 @@ class Se extends React.Component {
           </Tooltip>
           <br />
           <div style={{ height: "25px" }}>
-            <h3 className="mss" style={this.state.dis1}>
+            <h2 id="cent1" className=" h2" style={this.state.dis1}>
               {this.state.c}
-            </h3>
+            </h2>
           </div>
         </div>
       </div>

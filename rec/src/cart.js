@@ -223,7 +223,12 @@ class Cart extends React.Component {
                     {mm}
                     <CloseIcon
                       className="bbb"
-                      style={{ display:"block",margin: "auto", width: "80px", height: "80px" }}
+                      style={{
+                        display: "block",
+                        margin: "auto",
+                        width: "80px",
+                        height: "80px",
+                      }}
                       onClick={() =>
                         (document.querySelector(
                           "#id" + username
@@ -243,21 +248,26 @@ class Cart extends React.Component {
     let res = a.replace("./store/build/", "./");
     document.getElementById("vv").style.backgroundImage = "none";
     document.getElementById("vvv").src = res;
-    document.getElementById("vv").style.padding = 0;
+    document.getElementById("vv").style.padding = "0";
+    document.getElementById("vvv").style.marginTop = "7.5%";
+
     this.setState({ vd: null });
     window.scrollTo(0, 115);
     document.getElementById("vvv").onended = () => {
       document.getElementById("vv").style.backgroundImage = "url('wlle.jpg')";
-      document.getElementById("vv").style.padding = "5%";
+      document.getElementById("vv").style.padding = "7.5%";
+      document.getElementById("vvv").style.margin = "auto";
     };
   };
   render() {
     return (
       <div className="cont">
         <nav>
-          <h3>{this.state.a}</h3>
+          <h2 className="h2">{this.state.a}</h2>
           <br />
-          <h3 style={{ padding: "0px 20px" }}>Rec Videos</h3>
+          <h1 className="h1" style={{ padding: "0px 20px" }}>
+            Rec Videos
+          </h1>
         </nav>
         <Menu uses0={this.state.a} />
         <div id="di">
@@ -265,10 +275,9 @@ class Cart extends React.Component {
             <video
               id="vvv"
               poster="tv.jpg"
-              controls="controls" 
+              controls="controls"
               preload="auto"
               controlsList="nodownload"
-            
             >
               <source src="./vid.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -289,6 +298,7 @@ class Cart extends React.Component {
               />
               <Button
                 style={{
+                  width: "100%",
                   color: "white",
                   backgroundColor: "black",
                   width: "100%",
@@ -306,12 +316,14 @@ class Cart extends React.Component {
           </Tooltip>
           <br />
           <div style={{ height: "25px" }}>
-            <h3 className="mss" style={this.state.dis}>
+            <h2 id="cent" className="h2" style={this.state.dis}>
               {this.state.c}
-            </h3>
+            </h2>
           </div>
           <br />
-          <h3 style={{ textAlign: "center", padding: 0 }}>Videos</h3>
+          <h2 className="h2" style={{ textAlign: "center", padding: 0 }}>
+            Videos
+          </h2>
           <br />
           <div
             style={{

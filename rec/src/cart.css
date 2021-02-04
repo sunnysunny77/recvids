@@ -14,12 +14,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5%;
-  margin: 5% auto;
+  padding: 7.5%;
+  margin: 6% auto;
 }
 #vvv {
   margin: auto;
   height: initial;
+  max-height: 485px;
   width: 75%;
   background-color: transparent;
 }
@@ -35,7 +36,8 @@
 
 #f3 {
   margin: auto;
-  width: 218px;
+  min-width: 218px;
+  width: 20%;
   text-align: center;
   background-color: rgb(111, 26, 189);
   border: solid 1px black;
@@ -68,6 +70,11 @@
 .baa:hover {
   color: white;
   cursor: pointer;
+}
+
+#cent0 {
+  padding: initial;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1200px) {

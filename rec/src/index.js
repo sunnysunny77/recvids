@@ -50,7 +50,7 @@ class Index extends React.Component {
         }
       })
       .catch((error) => {
-        alert(error.response.statusText)
+        alert(error.response.statusText);
       });
   }
   change = (event) => {
@@ -158,7 +158,7 @@ class Index extends React.Component {
                 height: "115px",
               }}
             >
-              <h1>Rec Videos</h1>
+              <h1 id="h1">Rec Videos</h1>
             </div>
           </div>
           <div id="lo" style={this.state.dis}>
@@ -182,14 +182,16 @@ class Index extends React.Component {
                 }}
               />
             </Tooltip>
-            <h2> &nbsp;{this.state.a}</h2>
+            <h2 id="h2"> &nbsp;{this.state.a}</h2>
             <form id="a2" style={this.state.dis0} onSubmit={this.sub0}>
               <TextField
+                className="hun"
                 inputProps={{
                   maxLength: 16,
                 }}
                 InputProps={{
                   style: {
+                    width: "100%",
                     color: "white",
                     fontSize: "170%",
                     borderRadius: 0,
@@ -207,11 +209,13 @@ class Index extends React.Component {
                 onChange={this.change}
               />
               <TextField
+                className="hun"
                 inputProps={{
                   maxLength: 16,
                 }}
                 InputProps={{
                   style: {
+                    width: "100%",
                     color: "white",
                     fontSize: "170%",
                     borderRadius: 0,
@@ -246,11 +250,13 @@ class Index extends React.Component {
             </form>
             <form id="a1" style={this.state.dis1} onSubmit={this.sub}>
               <TextField
+                className="hun"
                 inputProps={{
                   maxLength: 16,
                 }}
                 InputProps={{
                   style: {
+                    width: "100%",
                     color: "white",
                     fontSize: "170%",
                     borderRadius: 0,
@@ -268,11 +274,13 @@ class Index extends React.Component {
                 onChange={this.change}
               />
               <TextField
+                className="hun"
                 inputProps={{
                   maxLength: 16,
                 }}
                 InputProps={{
                   style: {
+                    width: "100%",
                     color: "white",
                     fontSize: "170%",
                     borderRadius: 0,

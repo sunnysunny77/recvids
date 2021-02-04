@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  max-width: 1920px;
 }
 
 .cont {
@@ -19,7 +20,7 @@ nav {
   background-image: url("wall.jpg");
 }
 
-h3 {
+.h1, .h2 {
   color: white;
   text-align: right;
   font-size: 130%;
@@ -30,3 +31,6 @@ h3 {
   padding-top: 2%;
   padding-right: 2%;
 }
+
+
+

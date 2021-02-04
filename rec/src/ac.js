@@ -199,9 +199,9 @@ class Ac extends React.Component {
     return (
       <div className="cont">
         <nav>
-          <h3>{this.state.a}</h3>
+          <h2 className="h2" >{this.state.a}</h2>
           <br />
-          <h3 style={{ padding: "0px 20px" }}>Rec Videos</h3>
+         <h1 className="h1" style={{ padding: "0px 20px" }}>Rec Videos</h1>
         </nav>
         <Menu uses0={this.state.a} />
         <div id="di">
@@ -221,7 +221,7 @@ class Ac extends React.Component {
           </div>
           <br />
           <br />
-          <h3 style={{ textAlign: "center", padding: 0 }}>Videos</h3>
+          <h2 className="h2" style={{ textAlign: "center", padding: 0 }}>Videos</h2>
           <br />
           <br />
           <br />
@@ -257,10 +257,10 @@ class Ac extends React.Component {
               padding: 0,
             }}
           ></p>
-          <h3 style={{ textAlign: "center", padding: 0 }}>
+          <h2 className="h2" style={{ textAlign: "center", padding: 0 }}>
             {" "}
             {this.state.head}{" "}
-          </h3>
+          </h2>
           <br />
           <div
             id="paypal-button-container"
