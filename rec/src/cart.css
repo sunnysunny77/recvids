@@ -23,6 +23,7 @@
   max-height: 485px;
   width: 75%;
   background-color: transparent;
+  outline: none;
 }
 
 #v {
